@@ -1,32 +1,19 @@
 from django.contrib import messages
-from django.contrib.auth.models import User
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
 from . import form as forms
-from . import models
-from .form import PatsientForm
 from .models import Profile
+from django.contrib.auth.decorators import login_required
+from .models import User
+
+@login_required
+def chat_room(request, username):
 
 
-# Create your views here.
-
-def register_patsient_view(request):
-    patsientForm = PatsientForm()
-    context = {'form': patsientForm}
-    if request.method == 'POST':
-        patsientForm = PatsientForm(request.POST)
-        if patsientForm.is_valid():
-            user = patsientForm.save()
-            user.password(user.password)
-            user.save()
-        return redirect('user:login')
-    return render(request, 'registration/signup.html', context)
-
-
+    render(request, 'chat/chatroom.html')
 
 def UserSignupView(request):
     userform = forms.UserForm()

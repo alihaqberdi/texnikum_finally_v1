@@ -46,17 +46,17 @@
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
 								<ul>
-									<li><a href="{% url 'home:index' %}">Home</a></li>
-									<li><a href="{% url 'home:about' %}">About us</a></li>
-									<li><a href="{% url 'home:service' %}">Services</a></li>
-									<li><a href="{% url 'home:news' %}">News</a></li>
-									<li><a href="{% url 'home:contact' %}">Contact</a></li>
-									{% if user.is_authenticated %}
-                                    <li><a href="{% url 'user:profile' %}">Profile</a></li>
-                                    <li><a href="{% url 'user:logout' %}">Log out</a></li>
+									<li><a href="{% url 'home:index' %}">Bosh sahifa</a></li>
+									<li><a href="{% url 'home:about' %}">Biz Haqimizda</a></li>
+									<li><a href="{% url 'home:service' %}">Xizmatlar</a></li>
+									<li><a href="{% url 'home:news' %}">Yangiliklar</a></li>
+									<li><a href="{% url 'home:contact' %}">Aloqa uchun</a></li>
+									{% if User.is_authenticated %}
+                                    <li><a href="{% url 'user:profile' %}">Shaxsiy Kabinet</a></li>
+                                    <li><a href="{% url 'user:logout' %}">Tizimdan chiqish</a></li>
                                   	{% else %}
-                                    <li><a href="{% url 'user:register' %}">sign up</a></li>
-                                    <li ><a href="{% url 'user:login' %}">login</a></li>
+                                    <li><a href="{% url 'user:register' %}">Ro'yxatdan o'tish</a></li>
+                                    <li ><a href="{% url 'user:login' %}">Kirish</a></li>
                                   	{% endif %}
 								</ul>
 							</nav>
@@ -149,19 +149,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="section_title"><h2>Our Featured Services</h2></div>
+					<div class="section_title"><h2>Tanlangan xizmatlarimiz</h2></div>
 				</div>
 			</div>
 			<div class="row services_row">
-				
+
 				<!-- Service -->
 				<div class="col-lg-4 col-md-6 service_col">
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_1.svg' %}" alt=""></div>
-							<div class="service_title trans_200">Free Checkups</div>
+							<div class="service_title trans_200">Bepul Tekshiruvlar</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>Bepul tekshiruvlar bemorlarga bepul beriladigan tibbiy maslahatlar yoki imtihonlarni anglatadi. Ushbu tekshiruvlar tibbiy yordam ko'rsatuvchi provayderlar, shifoxonalar, poliklinikalar yoki jamoat tashkilotlari tomonidan o'zlarining targ'ibot harakatlarining bir qismi sifatida yoki profilaktik yordamni targ'ib qilish usuli sifatida taklif qilinishi mumkin.</p>
 							</div>
 						</div>
 					</a>
@@ -172,9 +172,9 @@
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_2.svg' %}" alt=""></div>
-							<div class="service_title trans_200">Screening Exams</div>
+							<div class="service_title trans_200">Skrining imtihonlari</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>Skrining imtihonlari - bu kasallik yoki holat uchun hech qanday alomatlar yoki ma'lum xavf omillari bo'lmagan shaxslarda kasallik yoki holat mavjudligini aniqlash uchun o'tkaziladigan tibbiy testlar yoki protseduralar. Ushbu imtihonlar odatda potentsial sog'liq muammolarini jiddiyroq bo'lishidan oldin aniqlash uchun profilaktika chorasi sifatida ishlatiladi.</p>
 							</div>
 						</div>
 					</a>
@@ -185,9 +185,9 @@
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_3.svg' %}" alt=""></div>
-							<div class="service_title trans_200">RMI Services</div>
+							<div class="service_title trans_200">RMI xizmatlari</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>RMI xizmatlari, shuningdek, masofaviy usulni chaqirish xizmatlari sifatida ham tanilgan, turli xil dasturiy ta'minot ilovalari tarmoq orqali bir-biri bilan muloqot qilish imkonini beruvchi texnologiya turidir. RMI xizmatlari dasturiy ta'minotni ishlab chiquvchilarga taqsimlangan ilovalarni yaratishga imkon beradi, bu erda dasturning turli komponentlari turli xil kompyuterlarda ishlashi mumkin, ammo baribir bir-biri bilan uzluksiz o'zaro ta'sir qiladi.</p>
 							</div>
 						</div>
 					</a>
@@ -198,9 +198,9 @@
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_4.svg' %}" alt=""></div>
-							<div class="service_title trans_200">Dentistry</div>
+							<div class="service_title trans_200">Stomatologiya</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>Stomatologiya - bu tishlar, milklar va og'iz bo'shlig'ining boshqa tuzilmalariga ta'sir qiluvchi kasalliklarni tashxislash, davolash va oldini olishga qaratilgan tibbiyot sohasi. Stomatologlar - bu muntazam tozalash, plomba, ekstraktsiya va boshqa protseduralarni o'z ichiga olgan stomatologik xizmatlarni ko'rsatishga ixtisoslashgan tibbiyot mutaxassislari.</p>
 							</div>
 						</div>
 					</a>
@@ -211,9 +211,9 @@
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_5.svg' %}" alt=""></div>
-							<div class="service_title trans_200">Neonatology</div>
+							<div class="service_title trans_200">Neonatologiya</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>Neonatologiya - bu yangi tug'ilgan chaqaloqlarni, ayniqsa muddatidan oldin yoki og'ir kasallik bilan tug'ilgan chaqaloqlarni tibbiy yordamga qaratilgan pediatriyaning kichik ixtisosligi. Neonatologlar yangi tug'ilgan chaqaloqlar va chaqaloqlarni parvarish qilish bilan shug'ullanadigan shifokorlardir.</p>
 							</div>
 						</div>
 					</a>
@@ -224,9 +224,9 @@
 					<a href="services.html">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{% static 'images/service_6.svg' %}" alt=""></div>
-							<div class="service_title trans_200">Biochemistry</div>
+							<div class="service_title trans_200">Biokimyo</div>
 							<div class="service_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper sollicitudin.</p>
+								<p>Biokimyo - bu tirik organizmlarda sodir bo'ladigan kimyoviy jarayonlarga qaratilgan fan sohasi. U metabolizm, gen ekspressiyasi va oqsil sintezi kabi hujayra jarayonlarini boshqaradigan kimyoviy reaktsiyalar va molekulyar o'zaro ta'sirlarni o'rganish uchun biologiya va kimyo tamoyillarini birlashtiradi.</p>
 							</div>
 						</div>
 					</a>

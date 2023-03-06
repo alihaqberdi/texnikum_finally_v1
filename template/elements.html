@@ -47,17 +47,17 @@
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
 								<ul>
-									<li><a href="{% url 'home:index' %}">Home</a></li>
-									<li><a href="{% url 'home:about' %}">About us</a></li>
-									<li><a href="{% url 'home:service' %}">Services</a></li>
-									<li><a href="{% url 'home:news' %}">News</a></li>
-									<li><a href="{% url 'home:contact' %}">Contact</a></li>
-									{% if user.is_authenticated %}
-                                    <li><a href="{% url 'user:profile' %}">Profile</a></li>
-                                    <li><a href="{% url 'user:logout' %}">Log out</a></li>
+									<li><a href="{% url 'home:index' %}">Bosh sahifa</a></li>
+									<li><a href="{% url 'home:about' %}">Biz Haqimizda</a></li>
+									<li><a href="{% url 'home:service' %}">Xizmatlar</a></li>
+									<li><a href="{% url 'home:news' %}">Yangiliklar</a></li>
+									<li><a href="{% url 'home:contact' %}">Aloqa uchun</a></li>
+									{% if User.is_authenticated %}
+                                    <li><a href="{% url 'user:profile' %}">Shaxsiy Kabinet</a></li>
+                                    <li><a href="{% url 'user:logout' %}">Tizimdan chiqish</a></li>
                                   	{% else %}
-                                    <li><a href="{% url 'user:register' %}">sign up</a></li>
-                                    <li><a href="{% url 'user:login' %}">login</a></li>
+                                    <li><a href="{% url 'user:register' %}">Ro'yxatdan o'tish</a></li>
+                                    <li ><a href="{% url 'user:login' %}">Kirish</a></li>
                                   	{% endif %}
 								</ul>
 							</nav>
